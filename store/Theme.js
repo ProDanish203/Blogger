@@ -11,7 +11,7 @@ export const Theme = ({children}) => {
     }, [])
 
     if(!mounted)
-        return <>{children}</>;
+      return <>{children}</>;
 
   return (
     <ThemeProvider attribute='class'>{children}</ThemeProvider>

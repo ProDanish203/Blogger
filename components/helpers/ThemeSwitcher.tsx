@@ -16,8 +16,14 @@ export const ThemeSwitcher = () => {
 
   return (
     <div className="flex gap-2 items-center">
-    <div onClick={() => setTheme("light")}>Light</div>
-    <div onClick={() => setTheme("dark")}>dark</div>
+    {/* <div onClick={() => setTheme("light")}>Light</div>
+    <div onClick={() => setTheme("dark")}>dark</div> */}
+    <i className={`${theme == 'light' ? 'fas fa-moon' : 'fas fa-sun'} text-xl cursor-pointer`}
+    onClick={() => {
+      theme == 'light' ? setTheme('dark') : setTheme('light');
+    }}
+    ></i>
     </div>
+
   )
 }

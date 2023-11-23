@@ -2,6 +2,7 @@ import { navLinks } from '@/util/data'
 import Link from 'next/link'
 import React from 'react'
 import { ThemeSwitcher } from '../helpers/ThemeSwitcher'
+import { AuthLinks } from '../helpers/AuthLinks'
 
 export const Header = () => {
   return (
@@ -23,11 +24,7 @@ export const Header = () => {
                 </Link>
             ))}
 
-            <Link href='/login'
-            className='text-text dark:text-bg text-lg'
-            >
-                Login
-            </Link>
+            <AuthLinks/>
         </nav>
 
     </header>

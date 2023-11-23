@@ -7,9 +7,11 @@ export default function Home() {
 
     <Category/>
 
-     <section className="flex mt-10">
-        <Blogs/>
+     <section className="overflow-hidden flex gap-10 justify-between mt-10 relative">
+      <Blogs/>
+      <div className="max-2xl:hidden mt-12">
         <Sidebar/>
+      </div>
      </section>
     </>
   )

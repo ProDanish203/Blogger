@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export const BlogCard = () => {
   return (
-    <div className="flex max-lg:flex-col items-center gap-5">
+    <div className="flex max-lg:flex-col items-center gap-5 p-4 dark:bg-neutral-900 bg-neutral-300 rounded-md">
         <div className="relative max-lg:w-full lg:w-[1000px] h-[250px]">
             <Image src='/banner.jpg' alt="blog" fill
             className="object-cover rounded-md"
@@ -18,10 +18,10 @@ export const BlogCard = () => {
             <h2 className="text-2xl max-sm:text-xl text-text dark:text-white">Blog Title goes here</h2>
 
             <p className="text-neutral-500 dark:text-neutral-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ipsum impedit necessitatibus, tempora voluptas minus. Nostrum delectus, tempore sunt distinctio molestias, officia ex excepturi obcaecati natus repellat quasi nemo. Incidunt.
+                Lorem ipsum dolor sit amzet consectetur adipisicing elit. Fugit ipsum impedit necessitatibus, tempora voluptas minus. Nostrum delectus, tempore sunt distinctio molestias, officia ex excepturi obcaecati natus repellat quasi nemo. Incidunt.
             </p>
 
-            <button className="text-bg bg-accent px-5 py-2.5 rounded-md max-w-[150px]">
+            <button className="text-bg bg-accent px-5 py-2.5 rounded-md max-xs:max-w-full max-w-[150px]">
                 Read More
             </button>
         </div>

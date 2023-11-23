@@ -24,7 +24,7 @@ export default function RootLayout({
 
         <Header/>
         
-        <main className='max-w-[1500px] mx-auto p-4'>
+        <main className='max-w-[1500px] min-h-screen mx-auto p-4'>
           {children}
         </main>
 

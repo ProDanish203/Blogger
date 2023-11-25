@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export const BlogCard = () => {
   return (
-    <div className="flex max-lg:flex-col items-center gap-5 p-4 dark:bg-neutral-900 bg-neutral-300 rounded-md">
+    <div className="flex max-lg:flex-col items-center gap-5 p-4 dark:bg-neutral-900 bg-neutral-100 rounded-md">
         <div className="relative max-lg:w-full lg:w-[1000px] h-[250px]">
             <Image src='/banner.jpg' alt="blog" fill
             className="object-cover rounded-md"

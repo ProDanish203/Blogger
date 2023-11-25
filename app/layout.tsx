@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Footer, Header } from '@/components/shared'
 import { Theme } from "@/store/Theme";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 export const metadata: Metadata = {
   title: 'Blogger V2 | Discover latest blogs',
@@ -20,6 +22,7 @@ export default function RootLayout({
       </head>
       <body >
       <Theme>
+        <ToastContainer/>
         <main className='bg-bg dark:bg-darkBg'>
 
         <Header/>

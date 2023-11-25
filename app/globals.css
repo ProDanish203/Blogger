@@ -56,3 +56,10 @@ img{
 .row .col-2{
   flex: 1 1 450px;
 }
+.round{
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

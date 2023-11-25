@@ -2,7 +2,11 @@ import React from 'react'
 import { BlogCard } from '../cards/BlogCard'
 import { Pagination } from '.'
 
-export const Blogs = () => {
+interface Props{
+  cat?: string;
+}
+
+export const Blogs = ({cat}: Props) => {
   return (
     <div className='max-w-[1000px]'>
         <h4 className='text-2xl font-bold text-text dark:text-white'>Recent Posts</h4>

@@ -1,7 +1,9 @@
-import React from 'react'
+interface Props{
+  dark: boolean;
+}
 
-export const Loader = () => {
+export const Loader = ({dark}: Props) => {
   return (
-    <div>Loader</div>
+    <div className={`${!dark ? "lds-ellipsis" : "lds-ellipsis dark"} `}><div></div><div></div><div></div><div></div></div>
   )
 }

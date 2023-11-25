@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Footer, Header } from '@/components/shared'
 import { Theme } from "@/store/Theme";
+import { AuthProvider } from "@/store/AuthProvider";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 
@@ -21,19 +22,25 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossOrigin="anonymous" referrerPolicy="no-referrer"/>
       </head>
       <body >
-      <Theme>
-        <ToastContainer/>
-        <main className='bg-bg dark:bg-darkBg'>
-
-        <Header/>
         
-        <main className='max-w-[1500px] min-h-screen mx-auto p-4'>
-          {children}
-        </main>
+        <AuthProvider>
+          <Theme>
 
-        <Footer/>
-        </main>
-      </Theme>
+            <ToastContainer/>
+            <main className='bg-bg dark:bg-darkBg'>
+
+            <Header/>
+            
+            <main className='max-w-[1500px] min-h-screen mx-auto p-4'>
+              {children}
+            </main>
+
+            <Footer/>
+            </main>
+
+          </Theme>
+        </AuthProvider>
+
       </body>
     </html>
   )

@@ -2,12 +2,19 @@
 import { connectDb } from "../db";
 import Blog from "../models/Blog";
 
-export const getBlogs = async () => {
+export const getBlogs = async (page:number, limit:number) => {
     try{
         await connectDb();
-        const data = await Blog.find();
+        const startIndex = (page - 1) * limit;
 
-        if(data){
+        const blogs = await Blog.find().skip(startIndex).limit(limit);
+        const blogsCount = await Blog.countDocuments();
+
+        const data = {
+            blogs, blogsCount
+        };
+
+        if(blogs){
             return {data, success: true, message: "Blogs fetched successfully"}
         }else{
             return {success: false, message: "Error while fetching blogs"}

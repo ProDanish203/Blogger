@@ -48,7 +48,8 @@ export const Editor = () => {
         </div>
 
         <div>
-            <button className='bg-primary rounded-md px-5 py-2 cursor-pointer max-sm:w-full'>Publish</button>
+            <button className='bg-primary rounded-md px-5 py-2 cursor-pointer max-sm:w-full'
+            >Publish</button>
         </div>
     </div>
     </>

@@ -14,6 +14,14 @@ interface Params{
     }
 }
 
+export async function generateMetadata({params, searchParams}:any){
+    const {data} = await getBlog(params.slug, searchParams.id);
+    return {
+      title: data?.title,
+      description: "View full blog now"
+    }
+}
+
 const page = async ({params, searchParams}: Params) => {
 
     const slug = params.slug;

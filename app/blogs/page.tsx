@@ -3,6 +3,7 @@ import { Blogs, Sidebar } from '@/components/shared'
 const page = ({searchParams}:any) => {
 
   const cat = searchParams.cat;
+  const page = parseInt(searchParams.page) || 1
 
   return (
     <>
@@ -11,7 +12,7 @@ const page = ({searchParams}:any) => {
     </div>
     
     <section className="flex gap-10 justify-between mt-10 relative">
-      <Blogs/>
+      <Blogs page={page} limit={10} cat={cat}/>
       <div className="max-2xl:hidden mt-12">
         <Sidebar/>
       </div>

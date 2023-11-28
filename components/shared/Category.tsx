@@ -1,4 +1,5 @@
 import { getCategories } from '@/lib/actions/Category';
+import Link from 'next/link';
 
 export const Category = async () => {
 
@@ -14,7 +15,8 @@ export const Category = async () => {
             <div className={`rounded-lg bg-neutral-200 dark:bg-neutral-800 py-3 px-4`}
             key={i}
             >
-                <p className='dark:text-white capitalize'>{cat.title}</p>
+                <Link href={`/blogs?cat=${cat.slug}`} 
+                className='dark:text-white capitalize'>{cat.title}</Link>
             </div>
         ))
         }

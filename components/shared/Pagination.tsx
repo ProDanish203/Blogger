@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 export const Pagination = ({page, hasPrev, hasNext}: {page: number, hasNext:boolean, hasPrev:boolean}) => {
 
   const router = useRouter();
-  console.log(hasNext)
   const nextPage = () => {
     router.push(`?page=${page + 1}`, { scroll: false});
   }

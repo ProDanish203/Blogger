@@ -1,4 +1,5 @@
 "use server"
+import { revalidatePath } from "next/cache";
 import { connectDb } from "../db";
 import Category from "../models/Category";
 
@@ -13,6 +14,7 @@ export const createCat = async ({title, slug}: Props) => {
         const data = await Category.create({title, slug});
 
         if(data){
+            revalidatePath('/');
             return {data, success: true, message: "Category added successfully"}
         }else{
             return {success: false, message: "Error while creatimg category"}

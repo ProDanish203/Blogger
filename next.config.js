@@ -4,8 +4,8 @@ const nextConfig = {
         ignoreBuildErrors: true
     },
     images: {
-        domains: ['res.cloudinary.com', 'lh3.googleusercontent.com', 'beforeigosolutions.com']
-    }
+        domains: ['res.cloudinary.com', 'lh3.googleusercontent.com', 'beforeigosolutions.com', 'firebasestorage.googleapis.com']
+    },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;

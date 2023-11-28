@@ -109,8 +109,15 @@ img{
   -o-transform: translateY(-50%, 0);
 }
 
+#progress-container {
+  border: 1px solid #ccc;
+}
 
-
+#progress-bar {
+  width: 0;
+  background-color: #4caf50;
+  color: white;
+}
 
 /* Loader animation */
 .lds-ellipsis {

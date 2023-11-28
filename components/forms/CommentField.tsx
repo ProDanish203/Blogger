@@ -1,14 +1,27 @@
 "use client"
+import { createComment } from '@/lib/actions/Comment'
+import { usePathname } from 'next/navigation'
 import React, { FormEvent, useState } from 'react'
 import { toast } from 'react-toastify'
 
-export const CommentField = () => {
+export const CommentField = ({postId}:{postId: string}) => {
     const [comment, setComment] = useState("")
-
+    const pathname = usePathname();
+    
     const handleSubmit = async (e:FormEvent) => {
         e.preventDefault();
         if(!comment) return toast.error("please add text for comment");
         
+        const {success} = await createComment({
+            desc: comment,
+            postId,
+            pathname
+        })
+        
+        if(success) 
+            toast.success("Comment added");
+        else    
+            toast.error("Something went wrong");
     }
 
 

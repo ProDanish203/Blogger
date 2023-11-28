@@ -31,7 +31,7 @@ export const Header = () => {
             <AuthLinks setOpen={setOpen}/>
         </nav>
             
-        <div className='flex gap-3 items-center'>
+        <div className='flex gap-3 items-center md:hidden'>
             <ThemeSwitcher/>
             <div className='md:hidden cursor-pointer'
             onClick={() => setOpen(prev => !prev)}
